@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contacts</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1>Lista de Contatos</h1>
+    
+    <nav>
+      <ul>
+        <li>
+          <a href="/kinds">Kinds</a>
+        </li>
+        <li>
+          <a href="/contacts">Contacts</a>
+        </li>
+        <li>
+          <a href="/addresses">Addresses</a>
+        </li>
+        <li>
+          <a href="/phones">Phones</a>
+        </li>
+      </ul>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
