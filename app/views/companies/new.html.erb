@@ -1,0 +1,17 @@
+<h2>Criando Empresa</h2>
+<%= form_with model: @company, local: true do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :company_name %>
+  </div>
+  <div>
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :company_active %>
+  </div>
+  <div>
+    <%= form.submit 'Salvar' %>
+  </div>
+<% end %>
+<div>
+  <%= link_to "Voltar", companies_path %>
+</div>

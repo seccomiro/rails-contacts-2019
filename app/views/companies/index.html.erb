@@ -1,0 +1,17 @@
+<h2>Empresas</h2>
+<% @companies.each do |company| %>
+  <div>
+    <%#= link_to 'Abrir', company %>
+    <%= link_to company do %>
+      <% if company.active? %>
+        <%= company.name %>
+      <% else %>
+        <del><%= company.name %></del>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to 'Nova Empresa', new_company_path %>
+</div>

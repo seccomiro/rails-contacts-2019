@@ -1,0 +1,6 @@
+<h2>Visualizando <%= @company.name %></h2>
+<div><%= @company.active? ? 'ATIVA' : 'DESATIVADA' %></div>
+<div>
+  <%#= link_to 'Voltar', :back %>
+  <%= link_to 'Voltar', companies_path %>
+</div>
